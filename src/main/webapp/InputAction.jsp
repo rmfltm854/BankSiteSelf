@@ -28,8 +28,8 @@
 	if(result == 1){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('입금완료')");
-		script.println("location.href='select.jsp'");
+		script.println("alert('입금완료')" );
+		script.println("location.href='Select.jsp'");
 		script.println("</script>");
 	}else {
 		PrintWriter script = response.getWriter();

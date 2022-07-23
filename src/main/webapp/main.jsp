@@ -14,6 +14,9 @@
 <form action = "InputMoney.jsp" method = post>
 	<input type = "submit" value = 입금 > 
 	</form> 
+<form action = "Findmoney.jsp" method = post>
+	<input type = "submit" value = 잔액확인> 
+	</form> 
 
 
 </body>

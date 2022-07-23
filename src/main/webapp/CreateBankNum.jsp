@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action = "BankNumAction.jsp" method = post>
+	이름 : <input type = "text" name = "UserName" ><br/>
 	하고싶은 계좌를 입력 : <input type = "text" name = "BankNum" >
-	이름 : <input type = "text" name = "UserName" >
 	<input type = "submit" value = 등록하기>
 </form>
 
