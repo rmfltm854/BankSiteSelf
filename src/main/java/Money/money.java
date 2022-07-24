@@ -29,6 +29,13 @@ public class money {
 	public void setUserName(String UserName) {
 		this.UserName = UserName;
 	}
+
+	@Override
+	public String toString() {
+		return "회원정보 : [계좌번호 : " + BankNumber + ",계좌보유 금액 : " + Money + ",사용자 이름 : " + UserName + "]";
+	}
+	
+	
 	
 	
 }
