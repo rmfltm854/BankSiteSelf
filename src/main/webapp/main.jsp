@@ -17,7 +17,9 @@
 <form action = "Findmoney.jsp" method = post>
 	<input type = "submit" value = 잔액확인> 
 	</form> 
-
+<form action = "CheckBanknum.jsp" method = post>
+	<input type = "submit" value = 보유계좌 확인> 
+	</form>
 
 </body>
 </html>

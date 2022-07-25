@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import Money.money;
 
 
 	public class userDAO {
@@ -73,6 +77,31 @@ import java.sql.ResultSet;
 			}
 			return -1;
 		}
+		
+		public List<money> CheckNumber(String name){
+			money MONEY = new money();
+			List<money> list = new ArrayList<money>();
+			String sql = "select Banknumber from usermoney where username = ?";
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, name);
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					MONEY.setBankNumber(rs.getString(1));
+					list.add(MONEY);
+					}
+			}catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					pstmt.close();
+					conn.close();
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+			return list;
+		}	
 	}
 
 
